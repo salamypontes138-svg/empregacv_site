@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EmpregaCV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin:0;
+      font-family: 'Poppins', Arial, Helvetica, sans-serif;
+      background: #F5F5F5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg,#0A4E92,#7AC943);
+      color: #fff;
+      padding: 80px 20px 40px 20px;
+      text-align: center;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+    }
+
+    header img {
+      max-width: 180px;
+      margin-bottom: 20px;
+      border-radius: 20px;
+      border: 3px solid #fff;
+    }
+
+    header h1 {
+      margin: 10px 0 0 0;
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    header h3 {
+      font-weight: 500;
+      margin: 10px 0;
+      font-size: 1.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 15px auto;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 15px 35px;
+      background: #7AC943;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 40px;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #69B93B;
+      transform: translateY(-3px);
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      color: #0A4E92;
+      margin-bottom: 40px;
+      font-size: 2.2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 30px 20px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    }
+
+    #formulario {
+      display:none;
+      max-width:600px;
+      margin:20px auto;
+      background:#fff;
+      padding:30px;
+      border-radius:20px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    #formulario input, #formulario textarea {
+      width:100%;
+      padding:12px;
+      margin:10px 0;
+      border-radius:10px;
+      border:1px solid #ccc;
+      font-size:1rem;
+    }
+
+    #formulario button {
+      padding: 15px 30px;
+      background:#0A4E92;
+      color:#fff;
+      border:none;
+      border-radius:40px;
+      cursor:pointer;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    #formulario button:hover {
+      background:#093B71;
+    }
+
+    footer {
+      background: #0A4E92;
+      color: #fff;
+      text-align:center;
+      padding:25px;
+      border-top-left-radius: 50px;
+      border-top-right-radius: 50px;
+    }
+
+    @media(max-width:600px){
+      header h1{font-size:2rem}
+      header h3{font-size:1.2rem}
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="logo.png" alt="Logo EmpregaCV">
+  <h1>EmpregaCV</h1>
+  <h3>Unindo currículos às vagas ideais</h3>
+  <p>A ponte entre desempregados e empresas em Cabo Verde</p>
+  <p>A EmpregaCV ajuda pessoas desempregadas a encontrar oportunidades de trabalho de forma rápida, simples e eficaz.</p>
+  <button class="btn" onclick="mostrarFormulario()">Enviar Currículo</button>
+</header>
+
+<section id="formulario">
+  <h2>Envio de Currículo</h2>
+  <form action="#" method="post" enctype="multipart/form-data">
+    <input type="text" name="nome" placeholder="Seu Nome" required>
+    <input type="email" name="email" placeholder="Seu Email" required>
+    <input type="text" name="telefone" placeholder="Telefone" required>
+    <textarea name="mensagem" placeholder="Mensagem (opcional)" rows="4"></textarea>
+    <label for="curriculo" style="font-weight:bold">Anexe seu currículo (PDF):</label>
+    <input type="file" name="curriculo" id="curriculo" accept=".pdf" required>
+    <button type="submit">Enviar Currículo</button>
+  </form>
+</section>
+
+<section>
+  <h2>Quem Somos</h2>
+  <p>A EmpregaCV é uma empresa criada para combater o desemprego em Cabo Verde. Muitas pessoas terminam a escola ou a universidade e enfrentam dificuldades para entrar no mercado de trabalho. A nossa missão é ser uma ponte entre os desempregados e as empresas.</p>
+</section>
+
+<section style="background:#F5F5F5">
+  <h2>Como Funciona</h2>
+  <div class="grid">
+    <div class="card">Passo 1: O candidato envia o seu currículo para a EmpregaCV.</div>
+    <div class="card">Passo 2: A nossa equipa analisa o currículo e identifica competências e áreas profissionais.</div>
+    <div class="card">Passo 3: Selecionamos empresas parceiras que procuram perfis compatíveis.</div>
+    <div class="card">Passo 4: Enviamos o currículo diretamente para as empresas.</div>
+    <div class="card">Passo 5: A empresa analisa e entra em contacto para contratação.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Serviços</h2>
+  <div class="grid">
+    <div class="card">Análise profissional de currículos</div>
+    <div class="card">Encaminhamento de currículos para empresas parceiras</div>
+    <div class="card">Apoio a desempregados na entrada no mercado de trabalho</div>
+    <div class="card">Facilitação do recrutamento para empresas</div>
+    <div class="card">Redução do tempo de contratação</div>
+  </div>
+</section>
+
+<section style="background:#F5F5F5">
+  <h2>Para Quem Trabalhamos</h2>
+  <div class="grid">
+    <div class="card"><strong>Para Desempregados</strong><br>Ajudamos pessoas à procura do primeiro emprego ou de uma nova oportunidade profissional.</div>
+    <div class="card"><strong>Para Empresas</strong><br>Ajudamos empresas a encontrar candidatos qualificados sem perder tempo analisando muitos currículos.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Diferencial da EmpregaCV</h2>
+  <p>A EmpregaCV atua de forma rápida, eficaz e focada no perfil de cada candidato. Os currículos são analisados antes do envio às empresas, garantindo maior compatibilidade e aumentando as chances de contratação.</p>
+</section>
+
+<section id="contactos" style="background:#F5F5F5">
+  <h2>Contactos</h2>
+  <p style="text-align:center">Para mais informações ou envio de currículos, entre em contacto connosco.</p>
+  <p style="text-align:center;font-weight:bold">Email: empregacv@email.com</p>
+</section>
+
+<footer>
+  <p>© 2025 EmpregaCV – Cabo Verde</p>
+</footer>
+
+<script>
+  function mostrarFormulario() {
+    const form = document.getElementById('formulario');
+    if(form.style.display === 'none' || form.style.display === '') {
+      form.style.display = 'block';
+      form.scrollIntoView({behavior: "smooth"});
+    }
+  }
+</script>
+
+</body>
+</html>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    background: #F5F5F5;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  header {
+    background: linear-gradient(135deg,#0A4E92,#7AC943);
+    color: #fff;
+    padding: 60px 20px 40px 20px;
+    text-align: center;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+
+  header img {
+    max-width: 150px;
+    width: 40%;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    border: 3px solid #fff;
+  }
+
+  header h1 {
+    margin: 10px 0 0 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  header h3 {
+    font-weight: 500;
+    margin: 10px 0;
+    font-size: 1.3rem;
+  }
+
+  header p {
+    font-size: 1rem;
+    max-width: 90%;
+    margin: 10px auto;
+  }
+
+  .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #7AC943;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 40px;
+    transition: 0.3s;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
+  .btn:hover {
+    background: #69B93B;
+    transform: translateY(-2px);
+  }
+
+  section {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: auto;
+  }
+
+  section h2 {
+    text-align: center;
+    color: #0A4E92;
+    margin-bottom: 30px;
+    font-size: 2rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    font-size: 0.95rem;
+  }
+
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  }
+
+  #formulario {
+    display: none;
+    max-width: 95%;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+
+  #formulario input, #formulario textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+
+  #formulario button {
+    width: 100%;
+    padding: 12px;
+    background: #0A4E92;
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+    font-size: 1rem;
+  }
+
+  #formulario button:hover {
+    background: #0ad658;
+  }
+
+  footer {
+    background: #0A4E92;
+    color: #fcf9f9;
+    text-align: center;
+    padding: 20px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    font-size: 0.9rem;
+  }
+
+  /* Responsividade */
+  @media(max-width: 768px){
+    header h1 { font-size: 2rem; }
+    header h3 { font-size: 1.1rem; }
+    header img { max-width: 120px; }
+    section h2 { font-size: 1.7rem; }
+    .btn { font-size: 0.95rem; padding: 10px 20px; }
+    .card { font-size: 0.9rem; padding: 15px; }
+  }
+
+  @media(max-width: 480px){
+    header h1 { font-size: 1.7rem; }
+    header h3 { font-size: 1rem; }
+    .btn { font-size: 0.9rem; padding: 8px 18px; }
+    section h2 { font-size: 1.5rem; }
+    .card { font-size: 0.85rem; padding: 12px; }
+  }
+</style>
+
